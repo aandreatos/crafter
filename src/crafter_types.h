@@ -1,5 +1,5 @@
-#include <Rcpp.h>
 #include <crafter.h>
+#include <Rcpp.h>
 
 typedef Crafter::Packet* MyPacket;
 
