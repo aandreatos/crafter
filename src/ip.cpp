@@ -42,7 +42,7 @@ DataFrame get_ip_layer(Rcpp::XPtr< std::vector<Crafter::Packet*> > pcap) {
 
     if (ip_layer) {
 
-      ts = (*it_pck)->GetTimestamp();
+      // ts = (*it_pck)->GetTimestamp(); // error 
 
       num.push_back(i+1);
       tssec.push_back(ts.tv_sec);
