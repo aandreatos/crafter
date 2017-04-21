@@ -57,7 +57,7 @@ List get_tcp_layer(Rcpp::XPtr< std::vector<Crafter::Packet*> > pcap) {
 
       RawLayer* raw_layer = (*it_pck)->GetLayer<RawLayer>();
 
-      ts = (*it_pck)->GetTimestamp();
+      // ts = (*it_pck)->GetTimestamp(); //class Crafter::Packet has no member named ‘GetTimestamp’
 
       num.push_back(i+1);
       tssec.push_back(ts.tv_sec);
