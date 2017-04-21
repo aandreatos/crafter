@@ -40,7 +40,7 @@ DataFrame get_icmp_layer(Rcpp::XPtr< std::vector<Crafter::Packet*> > pcap) {
 
     if (icmp_layer) {
 
-      ts = (*it_pck)->unix_timestamp(); // was ->GetTimestamp();
+      ts = (*it_pck)->GetTimestamp<ICMP>(); // was ->GetTimestamp();
 
       num.push_back(i+1);
       tssec.push_back(ts.tv_sec);
