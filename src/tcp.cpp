@@ -87,7 +87,7 @@ List get_tcp_layer(Rcpp::XPtr< std::vector<Crafter::Packet*> > pcap) {
       cwr.push_back((int)tcp_layer->GetCWR());
       windowsize.push_back((unsigned int)tcp_layer->GetWindowsSize());
       chksum.push_back((unsigned int)tcp_layer->GetCheckSum());
-      optsize.push_back((unsigned int)tcp_layer->ComputeOptionSize());
+      // optsize.push_back((unsigned int)tcp_layer->ComputeOptionSize()); /error ! no ComputeOptionSize()
 
     }
 
