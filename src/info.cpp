@@ -31,7 +31,7 @@ DataFrame get_packet_info(Rcpp::XPtr< std::vector<Crafter::Packet*> > pcap) {
     num[i] = i+1;
     layer_count[i] = (*it_pck)->GetLayerCount();
     packet_size[i] = (*it_pck)->GetSize();
-    ts = (*it_pck)->GetTimestamp();
+    // ts = (*it_pck)->GetTimestamp();  //error: ‘class Crafter::Packet’ has no member named ‘GetTimestamp’
     tssec[i] = ts.tv_sec;
     tsusec[i] = ts.tv_usec;
     int j = 0;
